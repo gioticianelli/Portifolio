@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstração das Cores e Fontes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        :root {
+            /* Cores de fundo */
+            --fundoPadrao: #140017;
+            --footer: #31014274;
+            --bg-hover: rgba(35, 6, 35, 0.556);
+            
+            /* Cores de texto */
+            --text-primary: #fefcfb;
+            --text-accent: #c525ff;
+            --text-menu: #d7c6d7;
+            --text-hover: #fc60ff;
+            
+            /* Cores de borda e interação */
+            --border-primary: #fa89fc;
+            --border-hover: #fc60ff;
+            
+            /* Fontes */
+            --font-title: "Krona One", sans-serif;
+            --font-text: "Montserrat", sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--fundoPadrao);
+            color: var(--text-primary);
+            font-family: var(--font-text);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-title);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--text-accent);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: var(--text-menu);
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--border-primary);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-primary);
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .color-item {
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid var(--border-primary);
+        }
+
+        .color-preview {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            border: 3px solid var(--text-primary);
+        }
+
+        .font-demo {
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 4px solid var(--text-accent);
+        }
+
+        .font-title {
+            font-family: var(--font-title);
+            font-size: 1.5rem;
+            color: var(--text-accent);
+        }
+
+        .font-text {
+            font-family: var(--font-text);
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+
+        .interactive-demo {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .demo-button {
+            padding: 15px 30px;
+            border: 2px solid var(--border-primary);
+            background: transparent;
+            color: var(--text-primary);
+            font-family: var(--font-text);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .demo-button:hover {
+            background-color: var(--bg-hover);
+            color: var(--text-hover);
+            border-color: var(--border-hover);
+        }
+
+        .demo-link {
+            color: var(--text-menu);
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .demo-link:hover {
+            color: var(--text-hover);
+        }
+
+        .footer-demo {
+            background-color: var(--footer);
+            color: var(--text-menu);
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+
+        .code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 10px 0;
+            border-left: 3px solid var(--text-accent);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Demonstração do Sistema de Cores e Fontes</h1>
+
+        <!-- Seção de Cores de Fundo -->
+        <div class="section">
+            <h2>🎨 Cores de Fundo</h2>
+            <div class="color-grid">
+                <div class="color-item">
+                    <div class="color-preview" style="background-color: var(--fundoPadrao);"></div>
+                    <h3>--fundoPadrao</h3>
+                    <p>#140017</p>
+                    <div class="code">background-color: var(--fundoPadrao);</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-preview" style="background-color: var(--footer);"></div>
+                    <h3>--footer</h3>
+                    <p>#31014274</p>
+                    <div class="code">background-color: var(--footer);</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-preview" style="background-color: var(--bg-hover);"></div>
+                    <h3>--bg-hover</h3>
+                    <p>rgba(35, 6, 35, 0.556)</p>
+                    <div class="code">background-color: var(--bg-hover);</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Cores de Texto -->
+        <div class="section">
+            <h2>📝 Cores de Texto</h2>
+            <div class="color-grid">
+                <div class="color-item">
+                    <div class="color-preview" style="background-color: var(--text-primary);"></div>
+                    <h3 style="color: var(--text-primary);">--text-primary</h3>
+                    <p>#fefcfb</p>
+                    <div class="code">color: var(--text-primary);</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-preview" style="background-color: var(--text-accent);"></div>
+                    <h3 style="color: var(--text-accent);">--text-accent</h3>
+                    <p>#c525ff</p>
+                    <div class="code">color: var(--text-accent);</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-preview" style="background-color: var(--text-menu);"></div>
+                    <h3 style="color: var(--text-menu);">--text-menu</h3>
+                    <p>#d7c6d7</p>
+                    <div class="code">color: var(--text-menu);</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-preview" style="background-color: var(--text-hover);"></div>
+                    <h3 style="color: var(--text-hover);">--text-hover</h3>
+                    <p>#fc60ff</p>
+                    <div class="code">color: var(--text-hover);</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Cores de Borda -->
+        <div class="section">
+            <h2>🔲 Cores de Borda e Interação</h2>
+            <div class="color-grid">
+                <div class="color-item">
+                    <div class="color-preview" style="background-color: var(--border-primary);"></div>
+                    <h3>--border-primary</h3>
+                    <p>#fa89fc</p>
+                    <div class="code">border-color: var(--border-primary);</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-preview" style="background-color: var(--border-hover);"></div>
+                    <h3>--border-hover</h3>
+                    <p>#fc60ff</p>
+                    <div class="code">border-color: var(--border-hover);</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Fontes -->
+        <div class="section">
+            <h2>🔤 Fontes</h2>
+            
+            <div class="font-demo">
+                <h3 class="font-title">Fonte para Títulos: --font-title</h3>
+                <p class="font-text" style="font-family: var(--font-title); font-size: 1.3rem;">
+                    "Krona One", sans-serif - ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                    abcdefghijklmnopqrstuvwxyz<br>
+                    0123456789
+                </p>
+            </div>
+
+            <div class="font-demo">
+                <h3 class="font-title">Fonte para Texto: --font-text</h3>
+                <p class="font-text" style="font-family: var(--font-text); font-size: 1.3rem;">
+                    "Montserrat", sans-serif - ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                    abcdefghijklmnopqrstuvwxyz<br>
+                    0123456789
+                </p>
+            </div>
+        </div>
+
+        <!-- Seção de Demonstração Interativa -->
+        <div class="section">
+            <h2>🖱️ Demonstração Interativa</h2>
+            
+            <h3>Botões com Efeito Hover</h3>
+            <div class="interactive-demo">
+                <button class="demo-button">Botão Normal</button>
+                <button class="demo-button">Passe o Mouse</button>
+                <button class="demo-button">Efeito Hover</button>
+            </div>
+
+            <h3 style="margin-top: 30px;">Links de Menu</h3>
+            <div class="interactive-demo">
+                <a href="#" class="demo-link">Link Normal</a>
+                <a href="#" class="demo-link">Passe o Mouse</a>
+                <a href="#" class="demo-link">Efeito Hover</a>
+            </div>
+        </div>
+
+        <!-- Demonstração do Footer -->
+        <div class="section">
+            <h2>⬇️ Demonstração do Footer</h2>
+            <div class="footer-demo">
+                <p>Este é um exemplo do footer usando --footer e --text-menu</p>
+                <p>Background: #31014274 (com transparência)</p>
+            </div>
+        </div>
+
+        <!-- Código CSS -->
+        <div class="section">
+            <h2>💻 Código CSS :root</h2>
+            <div class="code">
+                :root {<br>
+                &nbsp;&nbsp;--fundoPadrao: #140017;<br>
+                &nbsp;&nbsp;--footer: #31014274;<br>
+                &nbsp;&nbsp;--bg-hover: rgba(35, 6, 35, 0.556);<br>
+                &nbsp;&nbsp;--text-primary: #fefcfb;<br>
+                &nbsp;&nbsp;--text-accent: #c525ff;<br>
+                &nbsp;&nbsp;--text-menu: #d7c6d7;<br>
+                &nbsp;&nbsp;--text-hover: #fc60ff;<br>
+                &nbsp;&nbsp;--border-primary: #fa89fc;<br>
+                &nbsp;&nbsp;--border-hover: #fc60ff;<br>
+                &nbsp;&nbsp;--font-title: "Krona One", sans-serif;<br>
+                &nbsp;&nbsp;--font-text: "Montserrat", sans-serif;<br>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>
