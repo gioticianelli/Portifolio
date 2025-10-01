@@ -71,7 +71,7 @@ body {
 .apresentacao__links {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 32px;
 }
@@ -181,6 +181,7 @@ body {
     font-size: 1.5rem;
     font-family: var(--font-text);
     margin-bottom: 0.5rem;
+    font-weight: 18px;
 }
 
 .projeto__descricao {
